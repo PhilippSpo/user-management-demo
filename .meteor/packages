@@ -11,3 +11,4 @@ differential:vulcanize
 less
 meteorhacks:inject-initial
 softbricks:user-management
+softbricks:user-management-polymer
