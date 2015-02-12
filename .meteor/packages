@@ -5,9 +5,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 iron:router
 differential:vulcanize
 less
 meteorhacks:inject-initial
+softbricks:user-management
