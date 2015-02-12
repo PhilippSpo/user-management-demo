@@ -1,0 +1,17 @@
+{
+  "name": "di-layout",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master"
+  },
+  "homepage": "https://github.com/DifferentialWebComponents/di-layout",
+  "_release": "90da3e8004",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "90da3e80046c90f8559b20472e927b5c90692cfc"
+  },
+  "_source": "git://github.com/DifferentialWebComponents/di-layout.git",
+  "_target": "master",
+  "_originalSource": "DifferentialWebComponents/di-layout"
+}
