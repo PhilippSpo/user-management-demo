@@ -1,9 +1,10 @@
 <template name="layout">
-	<core-header-panel flex mode="scroll">
+	<core-header-panel id="hPanel" flex mode="waterfall">
       {{> header}}
       <div class="content">
       	{{> yield}}
-      	{{>userList}}
+      	<!-- {{>userList}} -->
+      	{{>editUser}}
       </div>
 	</core-header-panel>
 </template>

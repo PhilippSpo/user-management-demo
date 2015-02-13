@@ -1,0 +1,66 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<link rel="import" href="/components/core-list/core-list.html">
+<link rel="import" href="/components/core-image/core-image.html">
+<!-- import image iconset and core-icon
+<!-- <link rel="import" href="/components/core-icons/core-icons.html">
+<link rel="import" href="/components/core-icons/image-icons.html"> -->
+<polymer-element name="user-list" attributes="hPanel users" layout vertical>
+	<style>
+		#userList {
+			padding-top: 8px;
+		}
+	</style>
+	<template id="usersList">
+		<style type="text/css">
+			.item {
+				height: 72px;
+				border-bottom: 1px solid #f0f0f0;
+			}
+			.avatar {
+				margin-left: 16px;
+				width: 40px;
+				height: 40px;
+				border-radius: 20px;
+			}
+			.content {
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+			.text {
+				font-size: 16px;
+			}
+			.secondary-text {
+				font-size: 14px;
+			}
+			.emails {
+				color: #A3A3A3;
+			}
+		</style>
+		<div flex>
+			<core-list id="list" data="{{data}}" flex>
+				<template>
+					<div class="item" layout horizontal center>
+						<core-image class="avatar" src="{{model.avatar}}" sizing="cover" preload></core-image>
+						<div class="content">
+							<div class="text" flex>{{model.firstname}} {{model.name}}</div>
+							<div class="secondary-text" flex>
+							{{model.username}}<span class="emails"> - {{model.emails[0].address}}</span>
+							</div>
+						</div>
+					</div>
+				</template>
+			</core-list>
+		</div>
+	</template>
+	<script>
+		Polymer({
+			ready: function() {
+				this.data = [];
+				for(var i = 0; i<100; i++) {
+					this.data.push({username: 'testuser', avatar: '/avatar.png', emails: [{address: 'test@test.de'}], firstname: 'Philipp', name: 'Sporrer'});
+				}
+            	this.$.list.scrollTarget = document.getElementById(this.hPanel).scroller;
+			}
+		});
+	</script>
+</polymer-element>
