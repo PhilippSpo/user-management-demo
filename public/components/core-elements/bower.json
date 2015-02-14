@@ -46,6 +46,5 @@
     "core-tooltip": "Polymer/core-tooltip#^0.5",
     "core-transition": "Polymer/core-transition#^0.5",
     "sampler-scaffold": "Polymer/sampler-scaffold#^0.5"
-  },
-  "version": "0.5.4"
+  }
 }

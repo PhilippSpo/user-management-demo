@@ -5,11 +5,11 @@
     "polymer": "Polymer/polymer#master"
   },
   "homepage": "https://github.com/DifferentialWebComponents/di-layout",
-  "_release": "90da3e8004",
+  "_release": "cf2f1971d6",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "90da3e80046c90f8559b20472e927b5c90692cfc"
+    "commit": "cf2f1971d694ef2191b3e5332a819f77a53c2e0a"
   },
   "_source": "git://github.com/DifferentialWebComponents/di-layout.git",
   "_target": "master",

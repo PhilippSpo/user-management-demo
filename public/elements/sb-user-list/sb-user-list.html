@@ -4,7 +4,7 @@
 <!-- import image iconset and core-icon
 <!-- <link rel="import" href="/components/core-icons/core-icons.html">
 <link rel="import" href="/components/core-icons/image-icons.html"> -->
-<polymer-element name="user-list" attributes="hPanel users" layout vertical>
+<polymer-element name="user-list" attributes="hPanel users clickedUserCallback" layout vertical>
 	<style>
 		#userList {
 			padding-top: 8px;
@@ -37,9 +37,9 @@
 			}
 		</style>
 		<div flex>
-			<core-list id="list" data="{{data}}" flex>
+			<core-list id="list" data="{{users}}" flex>
 				<template>
-					<div class="item" layout horizontal center>
+					<div class="item user" data-user-id="{{model._id}}" on-tap="{{clickedUser}}" layout horizontal center>
 						<core-image class="avatar" src="{{model.avatar}}" sizing="cover" preload></core-image>
 						<div class="content">
 							<div class="text" flex>{{model.firstname}} {{model.name}}</div>
@@ -53,13 +53,20 @@
 		</div>
 	</template>
 	<script>
-		Polymer({
+		Polymer('user-list',{
 			ready: function() {
-				this.data = [];
-				for(var i = 0; i<100; i++) {
-					this.data.push({username: 'testuser', avatar: '/avatar.png', emails: [{address: 'test@test.de'}], firstname: 'Philipp', name: 'Sporrer'});
-				}
-            	this.$.list.scrollTarget = document.getElementById(this.hPanel).scroller;
+				var self = this;
+				// this sucks bigtime
+				this.timeout1 = window.setTimeout(function() {
+					console.log(document.getElementById(self.hPanel));
+					if(document.getElementById(self.hPanel)){
+	            		self.$.list.scrollTarget = document.getElementById(self.hPanel).scroller;
+	            	}
+  				}, 500);
+			},
+			clickedUser: function(e) {
+				var userId = e.target.templateInstance.model.model._id;
+				this.clickedUserCallback(userId);
 			}
 		});
 	</script>

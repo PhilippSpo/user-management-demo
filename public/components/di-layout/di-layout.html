@@ -14,7 +14,7 @@
   <script>
     Polymer({
       domReady: function() {
-        var flexors = this.querySelectorAll('[flex]');
+        var flexors = this.querySelectorAll('di-layout > [flex]');
 
         var mediaQuery = this.shadowRoot.querySelector('core-media-query');
         mediaQuery.addEventListener('core-media-change', function(ev) {
