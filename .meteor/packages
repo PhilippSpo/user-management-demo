@@ -10,8 +10,7 @@ iron:router
 differential:vulcanize
 less
 meteorhacks:inject-initial
-softbricks:user-management
-softbricks:user-management-polymer
 accounts-password
 useraccounts:core
 useraccounts:polymer
+softbricks:user-management

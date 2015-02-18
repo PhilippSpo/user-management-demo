@@ -1,3 +1,3 @@
 Template.addUser.events({
-	'click #createUser': UserManagementPolymer.submitCreateUserForm
+	//'click #createUser': UserManagementPolymer.submitCreateUserForm
 });
