@@ -14,3 +14,4 @@ accounts-password
 useraccounts:core
 useraccounts:polymer
 softbricks:user-management
+softbricks:user-management-unstyled
