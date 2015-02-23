@@ -2,8 +2,10 @@
 {{#globalLayout}}
 	<core-header-panel id="hPanel" flex mode="waterfall">
       {{> header}}
-      <div class="content">
-      	{{> yield}}
+      <div class="main-content">
+      	{{#transitioner}}
+      		{{> yield}}
+      	{{/transitioner}}
       	<!-- {{>showUsers}} -->
       	<!-- {{>editUser}} -->
       </div>

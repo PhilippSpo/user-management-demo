@@ -16,3 +16,4 @@ useraccounts:polymer
 softbricks:user-management
 softbricks:user-management-polymer
 tap:i18n
+ccorcos:transitioner

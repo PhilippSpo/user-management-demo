@@ -41,7 +41,7 @@
 		<div flex>
 			<core-list id="list" data="{{users}}" flex>
 				<template>
-					<div class="item user" data-user-id="{{model._id}}" on-tap="{{clickedUser}}" layout horizontal center>
+					<div class="item user" data-user-id="{{model._id}}" on-tap="{{clickedUser}}" horizontal layout center>
 						<core-image class="avatar" src="{{model.avatar}}" sizing="cover" preload></core-image>
 						<div class="content">
 							<div class="text" flex>{{model.profile.fullname}}</div>
