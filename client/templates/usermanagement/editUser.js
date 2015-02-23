@@ -3,5 +3,8 @@ Template.editUser.events({
 		Router.go('umShowUser', {
 			userId: Router.current().params.userId
 		});
-	}
+	},
+	'click #saveUser': function(event, template) {
+		UserManagementPolymer.submitEditUserForm(event, template);
+	},
 });
