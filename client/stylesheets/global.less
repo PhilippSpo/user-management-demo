@@ -63,15 +63,17 @@ ul {
     .transitioner {
       position: static;
 
+      >div {
+        position: static;
+        &.velocity-animating {
+          position: absolute;
+        }
+      }
       >div.page {
         // background: white;
         height: 100%;
         width: 100%;
         overflow: auto;
-        position: static;
-        &.velocity-animating {
-          position: absolute;
-        }
       }
     }
 
