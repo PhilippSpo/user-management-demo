@@ -33,10 +33,16 @@
     </a>
   </paper-item>
 
-  <paper-item class="toolbar-item">
+  {{#unless currentUser}}
+  <paper-item data-action="sign-in" class="toolbar-item">
     <a href="">
-      Polymer
+      Sign In
     </a>
   </paper-item>
+  {{else}}
+  <paper-item data-action="sign-out" class="toolbar-item">
+      Sign Out
+  </paper-item>
+  {{/unless}}
 
 </template>
