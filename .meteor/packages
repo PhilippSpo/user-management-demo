@@ -11,6 +11,6 @@ differential:vulcanize
 less
 meteorhacks:inject-initial
 accounts-password
-softbricks:user-management-polymer
 tap:i18n
 ccorcos:transitioner
+softbricks:user-management-polymer
