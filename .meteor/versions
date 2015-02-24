@@ -16,7 +16,6 @@ ccorcos:transitioner@2.0.1
 cfs:http-methods@0.0.27
 check@1.0.4
 coffeescript@1.0.5
-conielo:autoform-polymer-paper@0.1.2
 ddp@1.0.14
 deps@1.0.6
 differential:vulcanize@0.0.3
@@ -66,7 +65,7 @@ service-configuration@1.0.3
 session@1.0.5
 sha@1.0.2
 softbricks:user-management@0.0.1
-softbricks:user-management-polymer@0.0.1
+softbricks:user-management-unstyled@0.0.1
 softwarerero:accounts-t9n@1.0.6
 spacebars@1.0.5
 spacebars-compiler@1.0.4
@@ -79,7 +78,7 @@ ui@1.0.5
 underscore@1.0.2
 url@1.0.3
 useraccounts:core@1.6.1
-useraccounts:polymer@1.6.1
+useraccounts:unstyled@1.0.0
 velocityjs:velocityjs@1.2.1
 webapp@1.1.6
 webapp-hashing@1.0.2
