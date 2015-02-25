@@ -1,0 +1,11 @@
+<template name="showGroup">
+	<div class="page">
+		<core-toolbar class="um-background-color-primary">
+			<paper-icon-button class="goBack" icon="arrow-back"></paper-icon-button>
+			<div flex>{{_ "groupDetail"}}</div>
+			<paper-icon-button class="editGroup" icon="create"></paper-icon-button>
+			<paper-icon-button data-open-dialog data-heading="{{_ 'removeQuestion' group}}" data-temlpate="deleteGroup" icon="delete"></paper-icon-button>
+		</core-toolbar>
+		{{>umShowGroup}}
+	</div>
+</template>

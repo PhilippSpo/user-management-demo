@@ -27,17 +27,9 @@
 
 <template name="publicHeaderItems">
 
-  <paper-item class="toolbar-item">
-    <a href="">
-      Naked
-    </a>
-  </paper-item>
-
   {{#unless currentUser}}
   <paper-item data-action="sign-in" class="toolbar-item">
-    <a href="">
       Sign In
-    </a>
   </paper-item>
   {{else}}
   <paper-item data-action="sign-out" class="toolbar-item">

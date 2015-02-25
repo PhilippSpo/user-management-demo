@@ -4,13 +4,13 @@
 <!-- import image iconset and core-icon
 <!-- <link rel="import" href="/components/core-icons/core-icons.html">
 <link rel="import" href="/components/core-icons/image-icons.html"> -->
-<polymer-element name="user-list" attributes="hPanel users clickedUserCallback" layout vertical>
+<polymer-element name="groups-list" attributes="hPanel groups clickedGroupCallback" layout vertical>
 	<style>
 		#userList {
 			padding-top: 8px;
 		}
 	</style>
-	<template id="usersList">
+	<template id="groupsList">
 		<style type="text/css">
 			.item {
 				height: 72px;
@@ -39,14 +39,14 @@
 			}
 		</style>
 		<div flex>
-			<core-list id="list" data="{{users}}" flex>
+			<core-list id="list" data="{{groups}}" flex>
 				<template>
-					<div class="item user" data-user-id="{{model._id}}" on-tap="{{clickedUser}}" horizontal layout center>
+					<div class="item group" data-group-id="{{model._id}}" on-tap="{{clickedGroup}}" horizontal layout center>
 						<core-image class="avatar" src="{{model.avatar}}" sizing="cover" preload></core-image>
 						<div class="content">
-							<div class="text" flex>{{model.profile.fullname}}</div>
+							<div class="text" flex>{{model.groupname}}</div>
 							<div class="secondary-text" flex>
-							{{model.username}}<span class="emails"> - {{model.emails[0].address}}</span>
+							{{model.leader}}<span class="emails"></span>
 							</div>
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 		</div>
 	</template>
 	<script>
-		Polymer('user-list',{
+		Polymer('groups-list',{
 			ready: function() {
 				var self = this;
 				// this sucks bigtime
@@ -65,9 +65,9 @@
 	            	}
   				}, 500);
 			},
-			clickedUser: function(e) {
-				var user = e.target.templateInstance.model.model;
-				this.clickedUserCallback(e, user);
+			clickedGroup: function(e) {
+				var group = e.target.templateInstance.model.model;
+				this.clickedGroupCallback(e, group);
 			},
 			updateList: function() {
 				this.$.list.updateSize();
