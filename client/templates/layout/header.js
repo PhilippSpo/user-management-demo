@@ -10,7 +10,7 @@ Template.publicHeaderItems.events({
 });
 
 Template.language.events({
-	'click [data-action=englisch]': function () {
+	'click [data-action=english]': function () {
 		TAPi18n.setLanguage('en')
 			.done(function() {
 				UserManagementTemplates.setupSchemaMessages();
@@ -21,18 +21,5 @@ Template.language.events({
 			.done(function() {
 				UserManagementTemplates.setupSchemaMessages();
 			});
-	},
-	'click': function(e){
-		if(e.target.id == "de"){
-			TAPi18n.setLanguage('de')
-				.done(function() {
-					UserManagementTemplates.setupSchemaMessages();
-				});
-		}else if(e.target.id == "en"){
-			TAPi18n.setLanguage('en')
-				.done(function() {
-					UserManagementTemplates.setupSchemaMessages();
-				});
-		}
 	}
 });
