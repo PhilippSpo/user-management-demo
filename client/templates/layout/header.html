@@ -1,40 +1,60 @@
 <template name="header">
-  <core-toolbar class="toolbar toolbar-primary">
+    <core-toolbar class="toolbar toolbar-primary">
 
-    <!-- <a class="header-logo" href="/"> -->
-    	user-management
-    <!-- </a> -->
+        <!-- <a class="header-logo" href="/"> -->
+        user-management
+        <!-- </a> -->
 
-    <div flex></div>
+        <div flex></div>
 
-    <div class="visible-md wide">
-      <div layout horizontal>
-        {{> publicHeaderItems}}
-      </div>
-    </div>
+        <div class="visible-md wide">
+            <div layout horizontal>
+                {{> publicHeaderItems}}
+            </div>
+        </div>
 
-    <paper-menu-button class="hidden-md narrow">
-      <paper-icon-button icon="menu" role="button"></paper-icon-button>
-      <paper-dropdown class="dropdown" halign="right">
-        <core-menu class="menu">
-          {{> publicHeaderItems}}
-        </core-menu>
-      </paper-dropdown>
-    </paper-menu-button>
+        <paper-menu-button>
+            <paper-icon-button icon="language" role="button"></paper-icon-button>
+            <paper-dropdown class="dropdown" halign="right">
+                <core-menu class="menu">
+                    {{>language}}
+                </core-menu>
+            </paper-dropdown>
+        </paper-menu-button>
 
-  </core-toolbar>
+        <paper-menu-button class="hidden-md narrow">
+            <paper-icon-button icon="menu" role="button"></paper-icon-button>
+            <paper-dropdown class="dropdown" halign="right">
+                <core-menu class="menu">
+                    {{> publicHeaderItems}}
+                </core-menu>
+            </paper-dropdown>
+        </paper-menu-button>
+
+   </core-toolbar>
+
 </template>
 
 <template name="publicHeaderItems">
 
-  {{#unless currentUser}}
-  <paper-item data-action="sign-in" class="toolbar-item">
-      Sign In
-  </paper-item>
-  {{else}}
-  <paper-item data-action="sign-out" class="toolbar-item">
-      Sign Out
-  </paper-item>
-  {{/unless}}
+    {{#unless currentUser}}
+        <paper-item data-action="sign-in" class="toolbar-item">
+            Sign In
+        </paper-item>
+    {{else}}
+        <paper-item data-action="sign-out" class="toolbar-item">
+            Sign Out
+        </paper-item>
+    {{/unless}}
 
+
+</template>
+
+<template name="language">
+    <paper-item id="en" data-action="english" class="language-item">
+        English
+    </paper-item>
+    <paper-item id="de" data-action="german" class="language-item">
+        German
+    </paper-item>
 </template>
