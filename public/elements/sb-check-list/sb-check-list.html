@@ -1,0 +1,72 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<link rel="import" href="/components/paper-item/paper-item.html">
+<link rel="import" href="/components/core-icon/core-icon.html">
+
+<polymer-element name="check-list" attributes="items itemClicked">
+    <template>
+        <style>
+            section {
+                max-height: 200px;   
+                overflow-y: auto;
+            }
+            core-icon {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            .checked {
+                color: green;
+            }
+            .primary-text {
+                font-size: 16px;
+            }
+            .secondary-text {
+                font-size: 14px;
+            }
+        </style>
+        <section>
+            <template repeat="{{item, itemIndex in items}}">
+                <paper-item on-tap="{{touch}}">
+                    <div class="content">
+                        <div class="primary-text" flex>
+                            {{item.profile.fullname}}
+                        </div>
+                        <div class="secondary-text" flex>
+                            {{item.emails[0].address}}
+                        </div>
+                    </div>
+                    <template if="{{item.checked}}">
+                        <core-icon icon="check" class="{{item.checked}}"></core-icon>
+                    </template>
+                    <template if="{{!item.checked}}">
+                        <core-icon icon="lock" class="{{item.checked}}"></core-icon>
+                    </template>
+                </paper-item>
+            </template>
+        </section>
+    </template>
+    <script>
+
+        Polymer({
+            items: [{
+                title: 'title1'
+            },{
+                title: 'title2'
+            }],
+            itemClicked: function() {
+
+            },
+            touch: function(e) {
+                selectedItem = e.target.templateInstance.model.item;
+                if(selectedItem.checked === 'checked'){
+                    selectedItem.checked = '';
+                }else{
+                    selectedItem.checked = 'checked';
+                }
+                // this.checked = true;
+                this.itemClicked(selectedItem);
+            }
+        });
+
+
+    </script>
+</polymer-element>

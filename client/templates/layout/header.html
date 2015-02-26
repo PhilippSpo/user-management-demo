@@ -27,13 +27,29 @@
 
 <template name="publicHeaderItems">
 
+  <paper-item data-action="showUsers" class="toolbar-item">
+    <a href="{{pathFor route='umShowUsers'}}">
+      {{_ "users"}}
+    </a>
+  </paper-item>
+
+  <paper-item data-action="showGroups" class="toolbar-item">
+    <a href="{{pathFor route='umShowGroups'}}">
+      {{_ "groups"}}
+    </a>
+  </paper-item>
+
   {{#unless currentUser}}
   <paper-item data-action="sign-in" class="toolbar-item">
+    <a href="{{pathFor route='atSignIn'}}">
       Sign In
+    </a>
   </paper-item>
   {{else}}
   <paper-item data-action="sign-out" class="toolbar-item">
+    <a href="#">
       Sign Out
+    </a>
   </paper-item>
   {{/unless}}
 
