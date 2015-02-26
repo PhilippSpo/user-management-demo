@@ -61,13 +61,13 @@
   {{#unless currentUser}}
   <paper-item data-action="sign-in" class="toolbar-item">
     <a href="{{pathFor route='atSignIn'}}">
-      Sign In
+      {{t9n 'signIn'}}
     </a>
   </paper-item>
   {{else}}
   <paper-item data-action="sign-out" class="toolbar-item">
     <a href="#">
-      Sign Out
+      {{t9n 'signOut'}}
     </a>
   </paper-item>
   {{/unless}}
