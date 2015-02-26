@@ -13,6 +13,15 @@
       </div>
     </div>
 
+    <paper-menu-button class="narrow">
+      <paper-icon-button icon="language" role="button"></paper-icon-button>
+        <paper-dropdown class="dropdown" halign="right">
+            <core-menu class="menu">
+                {{>language}}
+            </core-menu>
+        </paper-dropdown>
+    </paper-menu-button>
+
     <paper-menu-button class="hidden-md narrow">
       <paper-icon-button icon="menu" role="button"></paper-icon-button>
       <paper-dropdown class="dropdown" halign="right">
@@ -24,6 +33,16 @@
 
   </core-toolbar>
 </template>
+
+<template name="language">
+    <paper-item id="en" data-action="english" class="toolbar-item language-item">
+        English
+    </paper-item>
+    <paper-item id="de" data-action="german" class="toolbar-item language-item">
+        German
+    </paper-item>
+</template>
+
 
 <template name="publicHeaderItems">
 
