@@ -1,3 +1,7 @@
+Template.showGroup.rendered = function () {	
+	Session.set('globalFabVisible', true);
+};
+
 Template.showGroup.events({
 	'click .goBack': function () {
 		Router.go('umShowGroups');
