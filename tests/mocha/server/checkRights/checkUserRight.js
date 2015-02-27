@@ -32,7 +32,6 @@ if (!(typeof MochaWeb === 'undefined')){
       describe("checkUserRight Check user right for admin", function(){
         it('should return true when the user to change is the not same' +
         ' as the current user and the user is admin', function(){
-          Meteor.users.remove({username:'admin'});
           var userToInsert = {
             emails:[
                   {address: 'admin@admin.de'}
@@ -45,6 +44,7 @@ if (!(typeof MochaWeb === 'undefined')){
           };
           var admin = Meteor.users.insert(userToInsert);
           var returnVal = checkRights.checkUserRight('',admin);
+          Meteor.users.remove({username:'admin'});
           chai.assert.isTrue(returnVal, 'The user is a admin and is allowed to see the other user');
         });
       });
@@ -52,7 +52,6 @@ if (!(typeof MochaWeb === 'undefined')){
       describe("checkUserRight Check user right for superAdmin", function(){
         it('should return true when the user to change is the not same' +
         ' as the current user and the user is superAdmin', function(){
-          Meteor.users.remove({username:'superAdmin'});
           var userToInsert = {
             emails:[
               {address: 'superAdmin@admin.de'}
@@ -65,6 +64,7 @@ if (!(typeof MochaWeb === 'undefined')){
           };
           var superAdmin = Meteor.users.insert(userToInsert);
           var returnVal = checkRights.checkUserRight('',superAdmin);
+          Meteor.users.remove({username:'superAdmin'});
           chai.assert.isTrue(returnVal, 'The user is a superAdmin and is allowed to see the other user');
         });
       });

@@ -12,7 +12,6 @@ if (!(typeof MochaWeb === 'undefined')){
 
             describe("makeAndRemoveAdmin no admin", function(){
                 it('should return false when the user is no admin or superAdmin and himself', function(){
-                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -26,13 +25,13 @@ if (!(typeof MochaWeb === 'undefined')){
                     var noAdmin = Meteor.users.insert(userToInsert);
                     var noAdminObj = Meteor.users.findOne({_id: noAdmin});
                     var returnVal = checkRights.makeAndRemoveAdmin("otherId", noAdmin, noAdminObj);
+                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     chai.assert.isFalse(returnVal, 'The user is not allowed to make and remove admins');
                 });
             });
 
             describe("makeAndRemoveAdmin no admin himself", function(){
                 it('should return false when the user is no admin or superAdmin and himself', function(){
-                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -46,13 +45,13 @@ if (!(typeof MochaWeb === 'undefined')){
                     var noAdmin = Meteor.users.insert(userToInsert);
                     var noAdminObj = Meteor.users.findOne({_id: noAdmin});
                     var returnVal = checkRights.makeAndRemoveAdmin(noAdmin, noAdmin, noAdminObj);
+                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     chai.assert.isFalse(returnVal, 'The user is not allowed to make and remove admins');
                 });
             });
 
             describe("makeAndRemoveAdmin admin himself", function(){
                 it('should return false when the user is no admin or superAdmin and himself', function(){
-                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -66,13 +65,13 @@ if (!(typeof MochaWeb === 'undefined')){
                     var noAdmin = Meteor.users.insert(userToInsert);
                     var noAdminObj = Meteor.users.findOne({_id: noAdmin});
                     var returnVal = checkRights.makeAndRemoveAdmin(noAdmin, noAdmin, noAdminObj);
+                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     chai.assert.isFalse(returnVal, 'The user is not allowed to make and remove admins');
                 });
             });
 
             describe("makeAndRemoveAdmin superAdmin himself", function(){
                 it('should return false when the user is no admin or superAdmin and himself', function(){
-                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -86,13 +85,13 @@ if (!(typeof MochaWeb === 'undefined')){
                     var noAdmin = Meteor.users.insert(userToInsert);
                     var noAdminObj = Meteor.users.findOne({_id: noAdmin});
                     var returnVal = checkRights.makeAndRemoveAdmin(noAdmin, noAdmin, noAdminObj);
+                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     chai.assert.isFalse(returnVal, 'The user is not allowed to make and remove admins');
                 });
             });
 
             describe("makeAndRemoveAdmin superAdmin not himself", function(){
                 it('should return false when the user is no admin or superAdmin and himself', function(){
-                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -106,13 +105,13 @@ if (!(typeof MochaWeb === 'undefined')){
                     var noAdmin = Meteor.users.insert(userToInsert);
                     var noAdminObj = Meteor.users.findOne({_id: noAdmin});
                     var returnVal = checkRights.makeAndRemoveAdmin("otherUser", noAdmin, noAdminObj);
+                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     chai.assert.isTrue(returnVal, 'The user is not allowed to make and remove admins');
                 });
             });
 
             describe("makeAndRemoveAdmin admin not himself", function(){
                 it('should return false when the user is no admin or superAdmin and himself', function(){
-                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -126,6 +125,7 @@ if (!(typeof MochaWeb === 'undefined')){
                     var noAdmin = Meteor.users.insert(userToInsert);
                     var noAdminObj = Meteor.users.findOne({_id: noAdmin});
                     var returnVal = checkRights.makeAndRemoveAdmin("otherUser", noAdmin, noAdminObj);
+                    Meteor.users.remove({username:'wantsToMakeAdmin'});
                     chai.assert.isTrue(returnVal, 'The user is not allowed to make and remove admins');
                 });
             });
