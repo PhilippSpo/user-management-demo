@@ -91,7 +91,7 @@ if (!(typeof MochaWeb === 'undefined')){
             });
 
             describe("makeAndRemoveAdmin superAdmin not himself", function(){
-                it('should return false when the user is no admin or superAdmin and himself', function(){
+                it('should return true when the user is no admin or superAdmin and himself', function(){
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
@@ -111,7 +111,7 @@ if (!(typeof MochaWeb === 'undefined')){
             });
 
             describe("makeAndRemoveAdmin admin not himself", function(){
-                it('should return false when the user is no admin or superAdmin and himself', function(){
+                it('should return true when the user is no admin or superAdmin and himself', function(){
                     var userToInsert = {
                         emails:[
                             {address: 'wantsToMakeAdmin@admin.de'}
