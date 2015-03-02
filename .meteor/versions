@@ -70,6 +70,7 @@ routepolicy@1.0.4
 service-configuration@1.0.3
 session@1.0.5
 sha@1.0.2
+simple:reactive-method@1.0.0
 softbricks:user-management@0.0.1
 softbricks:user-management-groups@0.0.1
 softbricks:user-management-polymer@0.0.1

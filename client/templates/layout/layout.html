@@ -17,6 +17,11 @@
                               <core-item icon="exit-to-app" label="{{t9n 'signOut'}}" data-action="sign-out">
                               </core-item>
                         {{/unless}}
+
+                        <core-submenu icon="settings" label="Language">
+                              <core-item label="German" data-action="german"></core-item>
+                              <core-item label="English" data-action="english"></core-item>
+                        </core-submenu> 
                   </core-menu>
             </core-header-panel>
             <core-header-panel id="hPanel" mode="waterfall" main>
@@ -24,7 +29,11 @@
                   <core-toolbar class="toolbar toolbar-secondary">
                         <div class="toolbar-anim-wrapper">
                               {{#transitioner}}
-                                    {{>yield 'layoutHeader'}}
+                                    {{#if activeSearch}}
+                                          {{>search}}
+                                    {{else}}
+                                          {{>yield 'layoutHeader'}}
+                                    {{/if}}
                               {{/transitioner}}
                         </div>
                   </core-toolbar>

@@ -1,3 +1,8 @@
+Template.layout.helpers({
+	activeSearch: function(e, template) {
+		return Session.get('activeUmSearch');
+	}
+});
 Template.layout.events({
 	'tap [data-action=sign-in]': function() {
 		Router.go('atSignIn');
@@ -13,5 +18,22 @@ Template.layout.events({
 	},
 	'tap [data-action=showGroups]': function() {
 		Router.go('umShowGroups');
+	},
+	'tap [data-action=english]': function() {
+		T9n.setLanguage('en');
+		TAPi18n.setLanguage('en')
+			.done(function() {
+				UserManagementTemplates.setupSchemaMessages();
+			});
+	},
+	'tap [data-action=german]': function() {
+		T9n.setLanguage('de');
+		TAPi18n.setLanguage('de')
+			.done(function() {
+				UserManagementTemplates.setupSchemaMessages();
+			});
+	},
+	'keyup #search': function(e, template) {
+		Template.layout.searchHandler(e, template);
 	}
 });
