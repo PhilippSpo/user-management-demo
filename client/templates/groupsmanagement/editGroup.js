@@ -1,10 +1,10 @@
-Template.editGroup.events({
-	'click .goBack': function () {
+Template.editGroupToolbar.events({
+	'tap .goBack': function () {
 		Router.go('umShowGroup', {
 			groupId: Router.current().params.groupId
 		});
 	},
-	'click .saveGroup': function () {
+	'tap .saveGroup': function () {
 		UserManagementPolymer.submitEditGroupForm(event, template);
 	}
 });

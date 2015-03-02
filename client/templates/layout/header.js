@@ -1,30 +1,12 @@
-Template.publicHeaderItems.events({
-	'click [data-action=sign-in]': function() {
-		Router.go('atSignIn');
-	},
-	'click [data-action=sign-out]': function(e) {
-		e.preventDefault();
-		Meteor.logout(function() {
-			Router.go('atSignIn');
-		});
-	},
-	'click [data-action=showUsers]': function() {
-		Router.go('umShowUsers');
-	},
-	'click [data-action=showGroups]': function() {
-		Router.go('umShowGroups');
-	}
-});
-
 Template.language.events({
-	'click [data-action=english]': function() {
+	'tap [data-action=english]': function() {
 		T9n.setLanguage('en');
 		TAPi18n.setLanguage('en')
 			.done(function() {
 				UserManagementTemplates.setupSchemaMessages();
 			});
 	},
-	'click [data-action=german]': function() {
+	'tap [data-action=german]': function() {
 		T9n.setLanguage('de');
 		TAPi18n.setLanguage('de')
 			.done(function() {

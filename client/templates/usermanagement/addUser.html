@@ -1,10 +1,11 @@
 <template name="addUser">
-    <div class="page">
-		<core-toolbar class="um-background-color-primary">
-			<paper-icon-button id="goBack" icon="arrow-back"></paper-icon-button>
-			<div flex>Create User</div>
-			<paper-icon-button id="createUser" icon="check"></paper-icon-button>
-		</core-toolbar>
-		{{> umAddUser}}
-	</div>
+	{{> umAddUser}}
+</template>
+
+<template name="addUserToolbar">
+	<core-toolbar class="toolbar toolbar-secondary">
+		<paper-icon-button id="goBack" icon="arrow-back"></paper-icon-button>
+		<div flex>Create User</div>
+		<paper-icon-button id="createUser" icon="check"></paper-icon-button>
+	</core-toolbar>
 </template>

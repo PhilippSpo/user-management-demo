@@ -1,5 +1,5 @@
-Template.addGroup.events({
-	'click .goBack': function () {
+Template.addGroupToolbar.events({
+	'tap .goBack': function () {
 		Router.go('umShowGroups');
 	}
 });

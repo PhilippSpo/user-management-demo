@@ -1,6 +1,6 @@
-Template.addUser.events({
-	'click #createUser': UserManagementPolymer.submitCreateUserForm,
-	'click #goBack': function () {
+Template.addUserToolbar.events({
+	'tap #createUser': UserManagementPolymer.submitCreateUserForm,
+	'tap #goBack': function () {
 		Router.go('umShowUsers');
 	}
 });

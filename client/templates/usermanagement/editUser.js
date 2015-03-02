@@ -1,10 +1,10 @@
-Template.editUser.events({
-	'click .goToUserDetail': function () {
+Template.editUserToolbar.events({
+	'tap .goToUserDetail': function () {
 		Router.go('umShowUser', {
 			userId: Router.current().params.userId
 		});
 	},
-	'click #saveUser': function(event, template) {
+	'tap #saveUser': function(event, template) {
 		UserManagementPolymer.submitEditUserForm(event, template);
 	},
 });

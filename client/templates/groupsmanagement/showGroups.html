@@ -1,11 +1,11 @@
 <template name="showGroups">
-    <!-- <div class="page">
-		<core-toolbar class="um-background-color-primary">
-			<paper-icon-button class="goToUsers" icon="arrow-back"></paper-icon-button>
-			<div flex>{{_ "groupsList"}}</div>
-			<paper-icon-button class="editUser" icon="create"></paper-icon-button>
-			<paper-icon-button data-open-dialog data-heading="Are you sure?" data-temlpate="deleteUser" icon="delete"></paper-icon-button>
-		</core-toolbar> -->
-		{{>umShowGroups}}
-	<!-- </div> -->
+	{{>umShowGroups}}
+</template>
+
+<template name="showGroupsToolbar">
+	<core-toolbar class="toolbar toolbar-secondary">
+		<paper-icon-button id="showMenu" class="hidden-md narrow" icon="menu"></paper-icon-button>
+		<div flex>{{_ "groups"}}</div>
+		<paper-icon-button class="editUser" icon="search"></paper-icon-button>
+	</core-toolbar>
 </template>

@@ -49,7 +49,7 @@ Template.globalLayout.events({
     Session.set("global.ui.dialogData", null);
     return Session.set("global.ui.dialogFullOnMobile", null);
   },
-  "click [data-open-dialog]": function(e) {
+  "tap [data-open-dialog]": function(e) {
     var node;
     node = $(e.target);
     return GlobalUI.showDialog({

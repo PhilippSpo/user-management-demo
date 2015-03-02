@@ -1,17 +1,17 @@
 <template name="header">
-  <core-toolbar class="toolbar toolbar-primary">
+  <core-toolbar class="toolbar toolbar-secondary">
 
     <!-- <a class="header-logo" href="/"> -->
-    	user-management
+    	
     <!-- </a> -->
 
     <div flex></div>
 
-    <div class="visible-md wide">
+    <!-- <div class="visible-md wide">
       <div layout horizontal>
         {{> publicHeaderItems}}
       </div>
-    </div>
+    </div> -->
 
     <paper-menu-button class="narrow">
       <paper-icon-button icon="language" role="button"></paper-icon-button>
@@ -22,14 +22,14 @@
         </paper-dropdown>
     </paper-menu-button>
 
-    <paper-menu-button class="hidden-md narrow">
+    <!-- <paper-menu-button class="hidden-md narrow">
       <paper-icon-button icon="menu" role="button"></paper-icon-button>
       <paper-dropdown class="dropdown" halign="right">
         <core-menu class="menu">
           {{> publicHeaderItems}}
         </core-menu>
       </paper-dropdown>
-    </paper-menu-button>
+    </paper-menu-button> -->
 
   </core-toolbar>
 </template>
@@ -46,7 +46,7 @@
 
 <template name="publicHeaderItems">
 
-  <paper-item data-action="showUsers" class="toolbar-item">
+  <!-- <paper-item data-action="showUsers" class="toolbar-item">
     <a href="{{pathFor route='umShowUsers'}}">
       {{_ "users"}}
     </a>
@@ -56,7 +56,7 @@
     <a href="{{pathFor route='umShowGroups'}}">
       {{_ "groups"}}
     </a>
-  </paper-item>
+  </paper-item> -->
 
   {{#unless currentUser}}
   <paper-item data-action="sign-in" class="toolbar-item">

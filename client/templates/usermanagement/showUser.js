@@ -1,10 +1,10 @@
-Template.showUser.events({
-	'click .editUser': function () {
+Template.showUserToolbar.events({
+	'tap .editUser': function () {
 		Router.go('umEditUser',{
 			userId: Router.current().params.userId
 		});
 	},
-	'click .goToUsers': function () {
+	'tap .goToUsers': function () {
 		Router.go('umShowUsers');
 	}
 });

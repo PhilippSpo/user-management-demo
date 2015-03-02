@@ -54,12 +54,13 @@ ul {
   padding: 9px 0 0 8px;
 }
 
-#hPanel {
+// #hPanel {
   .main-content {
     // background: white;
     height: 100%;
     width: 100%;
     font-size: 120%;
+    position: relative;
     .transitioner {
       position: static;
 
@@ -99,6 +100,21 @@ ul {
       border-style: solid;
       border-color: @color-black-lightest;
     }
+  }
+// }
+
+.toolbar-anim-wrapper {
+  position: absolute;
+  height: 64px;
+  margin: 0;
+  left: -8px;
+  right: -8px;
+  // width: 100%;
+
+  core-toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
   }
 }
 

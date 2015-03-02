@@ -2,18 +2,18 @@ Template.showGroup.rendered = function () {
 	Session.set('globalFabVisible', true);
 };
 
-Template.showGroup.events({
-	'click .goBack': function () {
+Template.showGroupToolbar.events({
+	'tap .goBack': function () {
 		Router.go('umShowGroups');
 	},
-	'click .editGroup': function () {
+	'tap .editGroup': function () {
 		Router.go('umEditGroup', {
 			groupId: Router.current().params.groupId
 		});
 	}
 });
 
-Template.showGroup.helpers({
+Template.showGroupToolbar.helpers({
 	group: function () {
 		return TAPi18n.__('group');
 	}
