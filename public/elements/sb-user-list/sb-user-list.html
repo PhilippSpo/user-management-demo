@@ -74,6 +74,15 @@
 			},
 			updateList: function() {
 				this.$.list.updateSize();
+			},
+			get hash() {
+				if(this.model){
+					var url = Gravatar.imageUrl(this.model.emails[0].address, {
+						secure: true,
+						size: 40
+					});
+					return url;
+				}
 			}
 		});
 	</script>

@@ -1,6 +1,6 @@
 Template.layout.helpers({
 	activeSearch: function(e, template) {
-		return Session.get('activeUmSearch');
+		return UmUi.activeSearch.get();
 	}
 });
 Template.layout.events({

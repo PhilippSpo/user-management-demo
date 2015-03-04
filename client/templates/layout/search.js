@@ -3,6 +3,6 @@ Template.search.events({
 		$(template.find('#search')).val('');
 	},
 	'tap #goBack': function () {
-		Session.set('activeUmSearch', false);
+		UmUi.activeSearch.set(false);
 	}
 });

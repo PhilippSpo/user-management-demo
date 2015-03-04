@@ -3,7 +3,7 @@ Template.showUsersToolbar.events({
 		document.getElementById('coreDrawer').togglePanel();
 	},
 	'tap .searchUsers': function(e, template) {
-		Session.set('activeUmSearch', true);
+		UmUi.activeSearch.set(true);
 	}
 });
 
