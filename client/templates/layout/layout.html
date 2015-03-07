@@ -28,13 +28,13 @@
                   {{#globalLayout}}
                   <core-toolbar class="toolbar toolbar-secondary">
                         <div class="toolbar-anim-wrapper">
-                              {{#transitioner}}
                                     {{#if activeSearch}}
                                           {{>search}}
                                     {{else}}
-                                          {{>yield 'layoutHeader'}}
+                                          {{#transitioner}}
+                                                {{>yield 'layoutHeader'}}
+                                          {{/transitioner}}
                                     {{/if}}
-                              {{/transitioner}}
                         </div>
                   </core-toolbar>
                   <div class="main-content">
