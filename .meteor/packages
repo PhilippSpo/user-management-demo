@@ -13,5 +13,6 @@ accounts-password
 tap:i18n
 softbricks:user-management-polymer
 softbricks:user-management-groups
+softbricks:user-management-roles
 ccorcos:transitioner
 reactive-var

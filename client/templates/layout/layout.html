@@ -1,6 +1,7 @@
 <template name="layout">
       <!-- <div> -->
             {{#globalLayout}}
+            {{#umPolymerLayout}}
             <core-drawer-panel id="coreDrawer">
                   <core-header-panel mode="seamed" drawer>
                         <core-toolbar class="toolbar toolbar-primary">
@@ -10,6 +11,8 @@
                               <core-item icon="social:person" label="{{_ 'users'}}" data-action="showUsers">
                               </core-item>
                               <core-item icon="social:group" label="{{_ 'groups'}}" data-action="showGroups">
+                              </core-item>
+                              <core-item icon="social:group" label="{{_ 'roles'}}" data-action="manageRoles">
                               </core-item>
 
                               {{#unless currentUser}}
@@ -37,7 +40,7 @@
                                                 {{/transitioner}}
                                           {{/if}}
                               </div>
-                              {{> umPolymerLayout}}
+                              {{> umGlobalFab}}
                         </core-toolbar>
                               <div class="main-content">
                                     {{#transitioner}}
@@ -46,6 +49,7 @@
                               </div>
                   </core-header-panel>
             </core-drawer-panel>
+            {{/umPolymerLayout}}
             {{/globalLayout}}
       <!-- </div> -->
 </template>

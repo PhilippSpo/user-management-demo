@@ -1,28 +1,17 @@
 <link rel="import" href="/components/polymer/polymer.html">
 <link rel="import" href="/components/core-list/core-list.html">
-<link rel="import" href="/components/core-image/core-image.html">
-<!-- import image iconset and core-icon
-<!-- <link rel="import" href="/components/core-icons/core-icons.html">
-<link rel="import" href="/components/core-icons/image-icons.html"> -->
-<polymer-element name="groups-list" attributes="hPanel groups clickedGroupCallback" layout vertical>
+<polymer-element name="roles-list" attributes="hPanel roles clickedDeleteRoleCallback" layout vertical>
 	<style>
 		#userList {
 			padding-top: 8px;
 		}
 	</style>
-	<template id="groupsList">
+	<template id="rolesList">
 		<style type="text/css">
 			.item {
-				height: 72px;
+				height: 56px;
 				border-bottom: 1px solid #f0f0f0;
-				cursor: pointer;
-			}
-			.avatar {
-				margin-left: 16px;
-				width: 40px;
-				height: 40px;
-				border-radius: 20px;
-				background: #EFEFEF;
+				/*cursor: pointer;*/
 			}
 			.content {
 				padding-left: 16px;
@@ -42,13 +31,14 @@
 			}
 		</style>
 		<div flex>
-			<core-list id="list" data="{{groups}}" flex>
+			<core-list id="list" data="{{roles}}" flex>
 				<template>
-					<div class="item group" data-group-id="{{model._id}}" on-tap="{{clickedGroup}}" horizontal layout center>
-						<core-image class="avatar" src="{{model.avatar}}" sizing="cover" preload></core-image>
-						<div class="content">
-							<div class="text" flex>{{model.groupname}}</div>
-							<div class="secondary-text" flex>
+					<div class="item role" data-role-id="{{model._id}}" horizontal layout center>
+						<div class="content" flex horizontal justified layout>
+							<div class="text" horizontal layout center>{{model.name}}</div>
+							<div></div>
+							<div horizontal layout center>
+								<paper-icon-button icon="delete" on-tap="{{clickedDeleteRole}}"></paper-icon-button>
 							<!-- {{model.leader}}<span class="emails"></span> -->
 							</div>
 						</div>
@@ -58,7 +48,7 @@
 		</div>
 	</template>
 	<script>
-		Polymer('groups-list',{
+		Polymer('roles-list',{
 			ready: function() {
 				var self = this;
 				// this sucks bigtime
@@ -68,9 +58,9 @@
 	            	}
   				}, 500);
 			},
-			clickedGroup: function(e) {
-				var group = e.target.templateInstance.model.model;
-				this.clickedGroupCallback(e, group);
+			clickedDeleteRole: function(e) {
+				var role = e.target.templateInstance.model.model;
+				this.clickedDeleteRoleCallback(e, role);
 			},
 			updateList: function() {
 				this.$.list.updateSize();

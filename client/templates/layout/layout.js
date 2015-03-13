@@ -19,6 +19,9 @@ Template.layout.events({
 	'tap [data-action=showGroups]': function() {
 		Router.go('umShowGroups');
 	},
+	'tap [data-action=manageRoles]': function() {
+		Router.go('umManageRoles');
+	},
 	'tap [data-action=english]': function() {
 		T9n.setLanguage('en');
 		TAPi18n.setLanguage('en')

@@ -76,6 +76,7 @@ simple:reactive-method@1.0.0
 softbricks:user-management@0.0.1
 softbricks:user-management-groups@0.0.1
 softbricks:user-management-polymer@0.0.1
+softbricks:user-management-roles@0.0.1
 softwarerero:accounts-t9n@1.0.6
 spacebars@1.0.5
 spacebars-compiler@1.0.4
