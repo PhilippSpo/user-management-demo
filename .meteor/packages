@@ -12,9 +12,7 @@ meteorhacks:inject-initial
 accounts-password
 tap:i18n
 ccorcos:transitioner
-softbricks:user-management-unstyled
 mike:mocha
-
-
-npm-container
-softbricks:user-management-roles
+softbricks:user-management-groups
+softbricks:user-management-unstyled
+msavin:mongol
