@@ -12,7 +12,7 @@ meteorhacks:inject-initial
 accounts-password
 tap:i18n
 ccorcos:transitioner
-mike:mocha
 softbricks:user-management-groups
 softbricks:user-management-unstyled
 msavin:mongol
+mike:mocha
