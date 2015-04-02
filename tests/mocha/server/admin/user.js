@@ -19,3 +19,8 @@ if (!(typeof MochaWeb === 'undefined')) {
 
     });
 }
+Meteor.methods({
+    deleteUser: function(id) {
+        Meteor.users.remove({_id: id});
+    }
+});
