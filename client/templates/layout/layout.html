@@ -19,12 +19,25 @@
 				</nav>
 			</li>
           	<li>{{> atNavButton }}</li>
+			<li class="bold">
+				<a href="showUsers">
+                    Users
+				</a>
+			</li>
 			{{> Template.dynamic template=aside}}
 		</ul>
 	</header>
 	<main>
-		<div class="row">
-			{{> Template.dynamic template=main}}
+		<div class="col l12 s12 subHeader valign-wrapper">
+			<h5 class="valign">Users</h5>
+		</div>
+		<div class="row main-row">
+			<div id ="mainMiddle" class="col l12 s12 noPadding">
+				{{> Template.dynamic template=main}}
+            </div>
+            <div id="sidebar" class="hide sidebar-right right-aligned">
+                {{> sideBarElement}}
+            </div>
 		</div>
 	</main>
 </template>

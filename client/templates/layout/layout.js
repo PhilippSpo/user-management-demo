@@ -4,4 +4,10 @@ Template.layout.rendered = function () {
 		edge: 'left',
 		closeOnClick: true
 	});
+
+	$(".collapse-sidenavright").sideNav({
+		menuWidth: 500,
+		edge: 'right',
+		closeOnClick: true
+	});
 };

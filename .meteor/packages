@@ -6,11 +6,12 @@
 
 meteor-platform
 meteorhacks:flow-router
-meteorhacks:flow-layout
 msavin:mongol
 stylus
 materialize:materialize
 fastclick
+useraccounts:core
 useraccounts:materialize
 accounts-password
 softbricks:user-management-materialize
+meteorhacks:flow-layout
