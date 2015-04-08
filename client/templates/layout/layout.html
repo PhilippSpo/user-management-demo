@@ -35,9 +35,11 @@
 			<div id ="mainMiddle" class="col l12 s12 noPadding">
 				{{> Template.dynamic template=main}}
             </div>
+			{{#if sideBarNeeded}}
             <div id="sidebar" class="hide sidebar-right right-aligned">
                 {{> sideBarElement}}
             </div>
+			{{/if}}
 		</div>
 	</main>
 </template>
