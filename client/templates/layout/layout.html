@@ -1,45 +1,41 @@
 <template name="layout">
-	<header>
-		<div class="navbar-fixed">
-			<nav>
-				<div class="nav-wrapper row">
-					<div class="col s12">
-						<a href="#" data-activates="side-nav" class="waves-effect collapse-sidenav">
-							<i class="mdi-navigation-menu"></i>
-						</a>
-						{{> Template.dynamic template=top}}
-					</div>
-				</div>
-			</nav>
-		</div>
-		<ul id="side-nav" class="side-nav">
-			<li class="logo">
-				<nav>
-					<a href="#!" class="logo hide-on-med-and-down"><h4>Usr Mngmnt</h4></a>
-				</nav>
-			</li>
-          	<li>{{> atNavButton }}</li>
-			<li class="bold">
-				<a href="showUsers">
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper row">
+                    <div class="col s12">
+                        <a href="#" data-activates="side-nav" class="waves-effect collapse-sidenav">
+                            <i class="mdi-navigation-menu"></i>
+                        </a>
+                        {{> Template.dynamic template=top}}
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <ul id="side-nav" class="side-nav">
+            <li class="logo">
+                <nav>
+                    <a href="#!" class="logo hide-on-med-and-down"><h4>Usr Mngmnt</h4></a>
+                </nav>
+            </li>
+            <li>{{> atNavButton }}</li>
+            <li class="bold">
+                <a href="showUsers">
                     Users
-				</a>
-			</li>
-			{{> Template.dynamic template=aside}}
-		</ul>
-	</header>
-	<main>
-		<div class="col l12 s12 subHeader valign-wrapper">
-			<h5 class="valign">Users</h5>
-		</div>
-		<div class="row main-row">
-			<div id ="mainMiddle" class="col l12 s12 noPadding">
-				{{> Template.dynamic template=main}}
+                </a>
+            </li>
+            <!--{{> Template.dynamic template=aside}}-->
+        </ul>
+    </header>
+    <main>
+        <div id="subHeader" class="col l12 m12 s12 subHeader valign-wrapper">
+            <h5 class="valign">Users</h5>
+        </div>
+        <div class="row main-row">
+            <div id="mainMiddle" class="col l12 m12 s12 noPadding">
+                {{> Template.dynamic template=main}}
             </div>
-			{{#if sideBarNeeded}}
-            <div id="sidebar" class="hide sidebar-right right-aligned">
-                {{> sideBarElement}}
-            </div>
-			{{/if}}
-		</div>
-	</main>
+            {{> Template.dynamic template=sidebar}}
+        </div>
+    </main>
 </template>
