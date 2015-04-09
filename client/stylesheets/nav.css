@@ -85,3 +85,20 @@
 .paddingRight {
     margin-right:100px;
 }
+
+.primary-color {
+    background-color: #4480F7;
+}
+
+.modal .modal-header {
+    border-radius: 2px 2px 0 0;
+    border-bottom: 1px solid black;
+    background-color: #fafafa;
+    padding: 4px 6px;
+    height: 56px;
+    width: 100%;
+}
+
+.modal-header-button {
+    margin: 6px;
+}

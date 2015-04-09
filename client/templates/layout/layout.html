@@ -37,5 +37,11 @@
             </div>
             {{> Template.dynamic template=sidebar}}
         </div>
+        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+            <a id="createUserButton" class="btn-floating btn-large primary-color modal-trigger" href="#createuser">
+                <i class="large mdi-editor-mode-edit"></i>
+            </a>
+        </div>
+        {{> Template.dynamic template=modal}}
     </main>
 </template>
