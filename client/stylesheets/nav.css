@@ -12,6 +12,7 @@
         right: 0px;
         z-index: 99;
         background-color: white;
+        overflow: auto;
     }
 }
 
@@ -23,6 +24,7 @@
         right: 0px;
         z-index: 99;
         background-color: white;
+        overflow: auto;
     }
 }
 
@@ -45,6 +47,7 @@
 
 .main-row {
     height: calc(100vh - 64px);
+    margin-bottom: 0;
 }
 
 .subHeader {
@@ -105,10 +108,15 @@
 .mainContent{
     position:relative;
     height:100%;
+    margin-bottom: 0;
 }
 
 .fixedButton{
     bottom: 15px;
     position:absolute;
     right: 15px;
+}
+
+.scroll{
+    overflow: auto;
 }
