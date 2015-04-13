@@ -13,4 +13,17 @@ Template.layout.rendered = function () {
 };
 
 Template.layout.helpers({
+	colLayout: function(){
+		if(Session.get("sidebar") === true){
+			return "l7 m7";
+		}else{
+			return "l12 m12";
+		}
+	}
+});
+
+Template.layout.events({
+	'click #createUserButton': function(){
+		$('#createuser').openModal();
+	}
 });
