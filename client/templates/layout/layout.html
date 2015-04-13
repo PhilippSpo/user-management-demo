@@ -28,19 +28,21 @@
         </ul>
     </header>
     <main>
-        <div id="subHeader" class="col l12 m12 s12 subHeader valign-wrapper">
-            <h5 class="valign">Users</h5>
-        </div>
         <div class="row main-row">
-            <div id="mainMiddle" class="col l12 m12 s12 noPadding">
-                {{> Template.dynamic template=main}}
+            <div class="row col {{colLayout}} s12 noPadding mainContent">
+                <div id="subHeader" class="col l12 m12 s12 subHeader valign-wrapper">
+                    <h5 class="valign">Users</h5>
+                </div>
+                <div id="mainMiddle" class="col l12 m12 s12 noPadding">
+                    {{> Template.dynamic template=main}}
+                    <div class="fixedButton">
+                        <a id="createUserButton" class="btn-floating btn-large primary-color modal-trigger">
+                            <i class="large mdi-content-add"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             {{> Template.dynamic template=sidebar}}
-        </div>
-        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-            <a id="createUserButton" class="btn-floating btn-large primary-color modal-trigger" href="#createuser">
-                <i class="large mdi-editor-mode-edit"></i>
-            </a>
         </div>
         {{> Template.dynamic template=modal}}
     </main>
