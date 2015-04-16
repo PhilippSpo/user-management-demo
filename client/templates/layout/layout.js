@@ -21,17 +21,27 @@ Template.layout.helpers({
 		}
 	},
 	subHeaderTitle: function(){
-		var name = FlowRouter.reactiveCurrent().route.name;
-		if(name == "users"){
+		var mode = Session.get("mode");
+		if(mode == "users"){
 			return "Users";
-		}else if(name == "groups"){
+		}else if(mode == "groups"){
 			return "Groups";
 		}
+	},
+	mode: function(){
+		return Session.get("mode");
 	}
 });
 
 Template.layout.events({
-	'click #createUserButton': function(){
-		$('#createuser').openModal();
+	'click #createButton': function(){
+		var mode = Session.get("mode");
+		console.log(mode);
+		if(mode == "users"){
+			$('#createuser').openModal();
+		}else if(mode == "groups"){
+			$('#creategroup').openModal();
+		}
+
 	}
 });

@@ -13,6 +13,7 @@ fastclick
 useraccounts:core
 useraccounts:materialize
 accounts-password
+softbricks:user-management-groups
 softbricks:user-management-materialize
 meteorhacks:flow-layout
 mike:mocha
