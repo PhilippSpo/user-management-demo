@@ -1,0 +1,65 @@
+@import '../imports'
+
+vertical-align()
+  position relative
+  top 50%
+  -webkit-transform translateY(-50%)
+  -ms-transform translateY(-50%)
+  transform translateY(-50%)
+
+.collection
+  border 0
+
+  &.collection-medium
+    >.collection-item
+      height 72px
+
+  > a.collection-item
+    border 0
+    color #4D4D4E
+    line-height normal
+    display flex
+    align-items center
+    padding 0 16px
+
+    &:not(.active):hover
+      background-color: #F4F4F4;
+
+    &.avatar
+
+      padding 0 16px
+
+      >.collection-item-text
+        padding-left 14px
+
+      .circle
+        position static
+        display block
+
+    >*
+      display inline-block
+
+    .primary
+      font-size 16px
+
+    .secondary
+      font-size 14px
+      color #6F6F6F
+
+    &:after
+      content " "
+      position absolute
+      bottom 0
+      right 0
+      left 16px
+      height 1px
+      background-color #E4E4E4
+
+    &.avatar:after
+      content " "
+      position absolute
+      bottom 0
+      right 0
+      left 72px
+      height 1px
+      background-color #E4E4E4
