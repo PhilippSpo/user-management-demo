@@ -20,8 +20,13 @@
             </li>
             <li>{{> atNavButton }}</li>
             <li class="bold">
-                <a href="users">
+                <a href="/users">
                     Users
+                </a>
+            </li>
+            <li class="bold">
+                <a href="/groups">
+                    Groups
                 </a>
             </li>
             <!--{{> Template.dynamic template=aside}}-->
@@ -31,7 +36,7 @@
         <div class="row main-row">
             <div class="row col {{colLayout}} s12 noPadding mainContent scroll">
                 <div id="subHeader" class="col l12 m12 s12 subHeader valign-wrapper">
-                    <h5 class="valign">Users</h5>
+                    <h5 class="valign">{{subHeaderTitle}}</h5>
                 </div>
                 <div id="mainMiddle" class="col l12 m12 s12 noPadding">
                     {{> Template.dynamic template=main}}

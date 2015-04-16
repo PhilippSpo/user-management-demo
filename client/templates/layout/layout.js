@@ -19,6 +19,14 @@ Template.layout.helpers({
 		}else{
 			return "l12 m12";
 		}
+	},
+	subHeaderTitle: function(){
+		var name = FlowRouter.reactiveCurrent().route.name;
+		if(name == "users"){
+			return "Users";
+		}else if(name == "groups"){
+			return "Groups";
+		}
 	}
 });
 
